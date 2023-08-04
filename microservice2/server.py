@@ -1,3 +1,6 @@
+"""
+code to run uvicorn server
+"""
 import uvicorn
 
 if '__main__' == __name__:
