@@ -1,9 +1,9 @@
 from fastapi import FastAPI, HTTPException
 import requests
 
-app = FastAPI()
+app1 = FastAPI()
 
-@app.post("/send_process_po")
+@app1.post("/send_process_po")
 async def process_po(po_data: dict):
     try:
         # URL for the receiver service
