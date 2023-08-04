@@ -1,5 +1,5 @@
 from fastapi.testclient import TestClient
-from microservice2.reciever_po import app
+from reciever_po import app
 
 client = TestClient(app)
 

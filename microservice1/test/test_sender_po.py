@@ -1,6 +1,6 @@
 import requests
 from fastapi.testclient import TestClient
-from microservice1.sender_po import app1
+from sender_po import app1
 import httpx
 
 client = TestClient(app1)
