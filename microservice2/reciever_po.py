@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI,HTTPException
 
 app = FastAPI()
 
@@ -11,4 +11,4 @@ async def receive_po_message(po_data: dict):
         # Process the PO data (In this example, we just return it)
         return {"message": "PO data received and processed successfully", "po_id": po_id, "po_name": po_name}
     except KeyError:
-        return {"error": "Invalid PO data format."}
+        raise HTTPException(status_code=400, detail="Invalid PO data format.")
